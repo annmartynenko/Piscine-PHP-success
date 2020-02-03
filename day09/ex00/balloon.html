@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Balloon</title>
+    <style>
+        #ball {
+            height: 200px;
+            width: 200px;
+            background: red;
+            border-radius: 100%;
+            margin: 20% auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="ball" onclick="changeGo()" onmouseleave="changeBack()"></div>
+    <script>
+        let i = 1;
+        let colors = ['red', 'green', 'blue'];
+        bal = document.getElementById('ball');
+        function changeGo() {
+            if (i === 3)
+                i = 0;
+            bal.style.background = colors[i++];
+            let size = bal.offsetHeight;
+            bal.style.width = size + 10 + 'px';
+            bal.style.height = size + 10 + 'px';
+            bal.style.borderRadius = '120%';
+            if (bal.offsetHeight > '420px') {
+                bal.style.height = 200 + 'px';
+                bal.style.width = 200 + 'px';
+            }
+        }
+        function changeBack() {
+            if (i < 0)
+                i = 3;
+            bal.style.background = colors[i--];
+            let size = bal.offsetHeight;
+            bal.style.width = size - 5 + 'px';
+            bal.style.height = size - 5 + 'px';
+            bal.style.borderRadius = '80%';
+            if (bal.offsetWidth < '200px') {
+                bal.style.height = 200 + 'px';
+                bal.style.width = 200 + 'px';
+            }
+        }
+    </script>
+</body>
+</html>

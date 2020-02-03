@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        body{
+            display: block;
+            padding: 20px;
+            background: lightblue;
+            width: 25%;
+            margin: 25% auto;
+        }
+        #number1, #number2 {
+            border: none;
+            width: 100px;
+            height: 45px;
+            background: aquamarine;
+        }
+        #select {
+            width: 45px;
+            height: 45px;
+            background: lemonchiffon;
+            border: none;
+        }
+        #button {
+            background: lemonchiffon;
+            width: 100px;
+            height: 45px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="number1">
+    <select id="select">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="number2">
+    <button id='button' onclick="calculate()" type="submit">Try me!</button>
+    <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        setInterval(please, 30000);
+        function please(){
+            alert('Please, use me...');
+        }
+        function calculate() {
+            let number1 = parseInt($("#number1").val());
+            let number2 = parseInt($("#number2").val());
+            let sign = $("#select").val();
+            let rezult;
+            if (number1 < 0 || number2 < 0)
+                alert('Error:(');
+            else {
+                if ((sign === '/' || sign === '%') && number2 === 0)
+                    rezult = "It's over 9000!";
+                else if (sign === '+')
+                    rezult = number1 + number2;
+                else if (sign === '-')
+                    rezult = number1 - number2;
+                else if (sign === '*')
+                    rezult = number1 * number2;
+                else if (sign === '/')
+                    rezult = number1 / number2;
+                else if (sign === '%')
+                    rezult = number1 % number2;
+                alert(rezult);
+                console.log(rezult);
+                }
+        }
+    </script>
+</body>
+</html>

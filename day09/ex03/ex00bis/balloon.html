@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Balloon</title>
+    <style>
+        #ball {
+            height: 200px;
+            width: 200px;
+            background: red;
+            border-radius: 100px;
+            border-radius: 100%;
+            margin: 20% auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="ball" onclick="changeGo()" onmouseleave="changeBack()"></div>
+    <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        let i = 1;
+        let colors = ['red', 'green', 'blue'];
+        bal = $('#ball');
+        function changeGo() {
+            if (i === 3)
+                i = 0;
+            bal.css('background', colors[i++]);
+            let size = bal.height();
+            bal.css('width', size + 10);
+            bal.css('height', size + 10);
+            bal.css('borderRadius', '120%');
+            if (bal.height() > 420) {
+                bal.css('height', 200);
+                bal.css('width', 200);
+            }
+        }
+        function changeBack() {
+            if (i < 0)
+                i = 3;
+            bal.css('background', colors[i--]);
+            let size = bal.width();
+            bal.css('width',size - 5);
+            bal.css('height', size - 5);
+            bal.css('borderRadius',  '80%');
+            if (bal.width() < 200) {
+                bal.css('height', 200);
+                bal.css('width', 200);
+            }
+        }
+    </script>
+</body>
+</html>

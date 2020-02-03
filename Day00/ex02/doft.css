@@ -1,0 +1,127 @@
+body {
+	background-color: #505050;
+}
+.header {
+	margin: 0 100px 0 100px;
+	background-color: #909090;
+	border: 1px solid #909090;
+	border-radius: 10px;
+  	box-shadow: 10px 10px 5px black;	
+}
+
+.header_small {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+  	height: auto;
+  	float: right;
+  	width: 3%;
+}
+.big-box {
+	margin: 0 200px 0 200px;
+	display: flex;
+	flex-direction: row;
+}
+.small-box {
+	margin: 20px;
+	min-width: 120px;
+	height: 410px;
+	display: flex;
+	flex-direction: column;
+	background-color: #909090;
+	border: 1px solid #909090;
+	border-radius: 10px;
+  	box-shadow: 10px 10px 5px black;
+}
+.center-big-box {
+	margin: 20px;
+	background-color: #909090;
+	border: 1px solid #909090;
+	border-radius: 10px;
+  	box-shadow: 10px 10px 5px black;
+}
+.bricks {
+	display: block;
+  	background : url("resources/brick.jpg");
+  	background-repeat: repeat;
+  	background-size: 27%;
+  	height: 60px;
+  	width: 110px;
+  	align-self: center;
+}
+.text {
+  display: inline-block;
+  background-color: #98FB98;
+  width: 26%;
+  height: auto;
+  z-index: 4;
+  margin-top: -6%;
+  margin-left: 6%;
+  box-shadow: 10px 10px 5px black;
+  border-radius: 10px;
+  padding: 1%;
+  padding-bottom: 3%
+}
+p {
+  font-size: 0.8vw;
+  margin:0;
+  font-family: Verdana;
+}
+#brick {
+	width: 30%;
+	display: block;
+    visibility: hidden;
+}
+#loupe {
+	position: absolute;
+	margin-left: 800px;
+	margin-top: 10px;
+}
+#day_of_the_42 {
+  	border-radius: 20px;
+  	height: 130px;
+}
+
+#reload, #close {
+	height: 20px;
+	margin-left: 20px
+}
+#close {
+	margin-top: 80px;
+}
+#Advance, #Take, #Look, #Use, #Speak {
+	height: 60px;
+	width: 60px;
+	align-self: center;
+	margin: 10px;
+}
+#Look {
+	border: 5px solid red;
+	border-radius: 5px;
+}
+#cluster {
+	margin: 10px;
+}
+#book {
+	height: 100px;
+	width: 70px;
+	align-self: center;
+}
+#towel {
+	height: 60px;
+	width: 70px;
+	align-self: center;
+}
+#italic {
+	font-style: italic;
+}
+#big_word {
+	font-size: 22pt;
+	font-family: Georgia;
+}
+#forma {
+	width: 65%;
+}
+#ordinateur {
+	text-shadow: 6px 6px 5px red;
+}

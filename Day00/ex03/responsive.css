@@ -1,0 +1,43 @@
+body {
+  	background-image: url("https://static8.depositphotos.com/1389325/1039/v/450/depositphotos_10390856-stock-illustration-chemistry-background-molecule-models-and.jpg");
+}
+h1 {
+	text-align: center;
+	border: 2px solid black;
+  	border-radius: 12px;
+  	background-color: white;
+  	font-size: 2vw;
+}
+table {
+  	border-collapse: collapse;
+  	text-align: center;
+}
+table, th, td {
+  	border: 1px solid black;
+}
+td {
+	height: 5vh;
+	width: 6vw;
+	background-color: pink;
+	text-align: center;
+}
+b { 
+  	font-weight: bold;
+  	font-size: 1.5vw;
+}
+.number {
+	float: left;
+	font-size: 0.9vw;
+}
+.waga {
+	float: right;
+	font-size: 0.9vw;
+}
+.empty {
+	border: none;
+	background-color: white;
+}
+.period, th {
+	background-color: lightgrey;
+	font-size: 1.5vw;
+}
